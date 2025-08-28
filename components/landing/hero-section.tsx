@@ -104,7 +104,7 @@ export default function HeroSection() {
 
           <div className="max-w-3xl mx-auto mb-6 sm:mb-8">
             <AnimatedText
-              text="Te han mentido: la baja testosterona no es por la edad. Es por toxinas, estrés y hábitos que bloquean tu producción natural. Tu cuerpo puede producir testosterona como a los 20 años."
+              text="Te mintieron: la testosterona baja no es por la edad. Proviene de toxinas, del estrés y de hábitos que bloquean tu producción natural. Pero la verdad es que tu cuerpo todavía puede producir testosterona como si tuvieras 20 años."
               className="text-base sm:text-lg md:text-xl text-white/80 mb-4 sm:mb-6"
               delay={1}
             />
