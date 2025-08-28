@@ -97,7 +97,7 @@ export default function HeroSection() {
           </motion.div>
 
           <AnimatedText
-            text="Aumenta tu testosterona hasta 400% naturalmente. Recupera tu energía, fuerza y virilidad en solo 21 días."
+            text="Siente el poder de hasta un 400% más de testosterona en solo 21 días. De forma 100% natural, revive tu energía, vigor y virilidad como nunca antes."
             className="text-xl sm:text-2xl md:text-3xl text-[#F2EAD3] font-light mb-6 sm:mb-8"
             delay={0.5}
           />
