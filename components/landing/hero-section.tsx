@@ -104,12 +104,12 @@ export default function HeroSection() {
 
           <div className="max-w-3xl mx-auto mb-6 sm:mb-8">
             <AnimatedText
-              text="Te mintieron: la testosterona baja no es por la edad. Proviene de toxinas, del estrés y de hábitos que bloquean tu producción natural. Pero la verdad es que tu cuerpo todavía puede producir testosterona como si tuvieras 20 años."
+              text="Te mintieron: la testosterona baja no es por la edad. Proviene de toxinas, del estrés y de hábitos que bloquean tu producción natural impidiendo así que tu lápiz crezca y que tú te sientas hombre. Pero la verdad es que tu cuerpo todavía puede producir testosterona como si tuvieras 20 años."
               className="text-base sm:text-lg md:text-xl text-white/80 mb-4 sm:mb-6"
               delay={1}
             />
             <AnimatedText
-              text="El Método Tmax reactiva tu producción hormonal natural, aumentando energía, libido, masa muscular y confianza — sin inyecciones, geles o efectos secundarios."
+              text="El Método Tmax reactiva tu producción hormonal natural, aumentando energía, libido, masa muscular y confianza haciendo que tu lápiz crezca también — sin inyecciones, geles o efectos secundarios."
               className="text-base sm:text-lg md:text-xl text-white font-medium"
               delay={1.5}
             />
