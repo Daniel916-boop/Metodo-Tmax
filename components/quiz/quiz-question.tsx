@@ -70,15 +70,7 @@ export default function QuizQuestion({
 
 
 
-        {type === "text" ? (
-          <div className="mb-6">
-            <input
-              type="text"
-              value={value || ""}
-              onChange={handleTextChange}
-              placeholder="Escribe tu respuesta aquí..."
-              className="w-full p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white placeholder-gray-400 focus:border-red-500 focus:outline-none transition-colors"
-            />
+
           </div>
         ) : (
           <div className="space-y-3 mb-6">
