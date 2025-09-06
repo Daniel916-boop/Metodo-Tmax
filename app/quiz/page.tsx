@@ -129,10 +129,10 @@ export default function QuizPage() {
       id: "testosterone_goal",
       question: `${answers.name ? `${answers.name}, ` : ""}¿Cuánto te gustaría aumentar tu nivel de testosterona en 30 días?`,
       options: [
-        { value: "25", label: "25% (Potencial de aumento de 0.5 cm de lápiz)", percentage: 25 },
-        { value: "50", label: "50% (Potencial de aumento de 1.0 cm de lápiz)", percentage: 50 },
-        { value: "100", label: "100% (Potencial de aumento de 2.0 cm de lápiz)", percentage: 100 },
         { value: "400", label: "400% (Potencial de aumento de 4.0 cm de lápiz)", percentage: 400 },
+        { value: "100", label: "100% (Potencial de aumento de 2.0 cm de lápiz)", percentage: 100 },
+        { value: "50", label: "50% (Potencial de aumento de 1.0 cm de lápiz)", percentage: 50 },
+        { value: "25", label: "25% (Potencial de aumento de 0.5 cm de lápiz)", percentage: 25 },
       ],
       type: "single",
       showTable: false,
