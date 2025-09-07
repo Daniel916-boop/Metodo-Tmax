@@ -1,271 +1,396 @@
-<!DOCTYPE html><html lang="es" class="dark" style="color-scheme: dark;"><head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="es" class="dark" style="color-scheme: dark;">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Método Tmax - Diagnóstico Personalizado</title>
-    <!-- Incluindo o Tailwind CSS para estilização -->
+    <title>Método TMAX - Diagnóstico Personalizado</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Incluindo a fonte Montserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: #000;
             color: #fff;
         }
-        /* Estilo para animação de fade-in */
+        
+        /* Animações simples para substituir a biblioteca de animação */
         .fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        /* Animação para as opções de resposta */
-        .answer-option {
-            opacity: 0;
             animation: fadeIn 0.5s ease-in-out forwards;
         }
-
+        .fade-in-delay {
+            animation: fadeIn 0.5s ease-in-out 0.3s forwards;
+        }
+        .slide-in-up {
+             animation: slideInUp 0.5s ease-out forwards;
+        }
+        
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
-<body class="__className_e8ce0c">
+<body class="bg-black">
 
-    <!-- Banner de Oferta Relâmpago -->
-    <div id="offer-banner" class="w-full bg-red-600 text-white text-center py-2 text-sm font-bold relative">
-        <p class="mb-1">¡OFERTA RELÁMPAGO: 60% DE DESCUENTO! Termina en: <span id="countdown" class="font-mono text-lg">01:55:56</span></p>
-        <p class="text-xs opacity-80">¡Esta oferta ha estado activa durante 2 semanas y hoy es el último día!</p>
-    </div>
-
-    <div class="min-h-screen flex items-center justify-center py-8 px-4">
-        <div id="quiz-container" class="w-full max-w-2xl mx-auto">
-            <!-- O conteúdo do quiz será injetado aqui -->
-        </div>
-    </div>
-
-    <!-- Estrutura original dos scripts do Next.js mantida no final do body -->
-    <script src="js/webpack-70d85ae7a770901.js" async=""></script>
-    <script>
-        (self.__next_f = self.__next_f || []).push([0])
-    </script>
-    <script>
-        self.__next_f.push([1, "1:\"$Sreact.fragment\"\n2:I[7995,[\"177\",\"static/chunks/app/layout-726e38ce2395a9df.js\"],\"default\"]\n3:I[1507,[\"177\",\"static/chunks/app/layout-726e38ce2395a9df.js\"],\"ThemeProvider\"]\n4:I[6012,[],\"\"]\n5:I[3690,[],\"\"]\n6:I[4777,[],\"ClientPageRoot\"]\n7:I[6894,[\"570\",\"static/chunks/570-894dd62cee7abcef.js\",\"602\",\"static/chunks/app/quiz/page-eeaa88bc53164d66.js\"],\"default\"]\na:I[6236,[],\"OutletBoundary\"]\nd:I[6236,[],\"ViewportBoundary\"]\nf:I[6236,[],\"MetadataBoundary\"]\n11:I[2691,[],\"\"]\n:HL[\"/_next/static/media/e4af272ccee01ff0-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/css/25ef6bba9d44b375.css\",\"style\"]\n"])
-    </script>
-    <script>
-        self.__next_f.push([1, "0:{\"P\":null,\"b\":\"J76rP_-rZHLAqSxi4Oyun\",\"p\":\"\",\"c\":[\"\",\"quiz\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"quiz\",{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/25ef6bba9d44b375.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"es\",\"suppressHydrationWarning\":true,\"children\":[[\"$\",\"head\",null,{\"children\":[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap\",\"rel\":\"stylesheet\"}]}],[\"$\",\"body\",null,{\"className\":\"__className_e8ce0c\",\"children\":[[\"$\",\"$L2\",null,{}],[\"$\",\"$L3\",null,{\"attribute\":\"class\",\"defaultTheme\":\"dark\",\"enableSystem\":true,\"disableTransitionOnChange\":true,\"children\":[\"$\",\"$L4\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L5\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]]}]]}]]}],{\"children\":[\"quiz\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L4\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L5\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L6\",null,{\"Component\":\"$7\",\"searchParams\":{},\"params\":{},\"promises\":[\"$@8\",\"$@9\"]}],\"$undefined\",null,[\"$\",\"$La\",null,{\"children\":[\"$Lb\",\"$Lc\",null]}]]}],{},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"rFH0P5Q58gAEefnCbd9gl\",{\"children\":[[\"$\",\"$Ld\",null,{\"children\":\"$Le\"}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}],[\"$\",\"$Lf\",null,{\"children\":\"$L10\"}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$11\",\"$undefined\"],\"s\":false,\"S\":true}\n"])
-    </script>
-    <script>
-        self.__next_f.push([1, "8:{}\n9:{}\n"])
-    </script>
-    <script>
-        self.__next_f.push([1, "e:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\nb:null\n"])
-    </script>
-    <script>
-        self.__next_f.push([1, "c:null\n10:[[\"$\",\"title\",\"0\",{\"children\":\"Método Tmax - Desbloqueie seu tamanho real em 30 dias\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Ganhe de 3 a 8 cm de tamanho em apenas 30 dias com o Método Tmax. Protocolo biomecânico personalizado que libera seu tamanho real bloqueado por má circulação.\"}],[\"$\",\"meta\",\"2\",{\"name\":\"generator\",\"content\":\"v0.dev\"}]]\n"])
-    </script>
+    <div id="app-container"></div>
 
     <script>
-        // Lógica do Quiz
-        const quizContainer = document.getElementById('quiz-container');
-        const offerBanner = document.getElementById('offer-banner');
+        // ===================================================================================
+        // JAVASCRIPT "CÉREBRO" DO SITE
+        // Converte toda a lógica dos arquivos .tsx para Javascript puro
+        // ===================================================================================
 
-        const quizData = [
-            { question: "¿Cuál es tu nombre?", type: 'text', placeholder: 'Escribe tu respuesta aquí...' },
-            { question: "¿Cómo evalúas tu nivel de energía y disposición a lo largo del día?", type: 'radio', options: ['Muy bajo (siempre cansado, falta de iniciativa)', 'Bajo (cansancio frecuente, dificultad para concentrarse)', 'Moderado (energía razonable, algunos picos de cansancio)', 'Alto (lleno de energía, productivo todo el día)'] },
-            { question: "¿Has notado cambios en tu masa muscular o dificultad para ganar músculos, incluso entrenando?", type: 'radio', options: ['Pérdida significativa de masa muscular', 'Pequeña pérdida o dificultad para ganhar', 'Mantenimiento de la masa muscular', 'Ganancia fácil de masa muscular'] },
-            { question: "¿Cómo está la calidad de tu sueño? ¿Te despiertas descansado?", type: 'radio', options: ['Muy mala (insomnio, sueño agitado, despiertas agotado)', 'Mala (dificultad para dormir, sueño ligero)', 'Regular (duermes, pero no siempre despiertas totalmente descansado)', 'Buena (duermes profundamente, despiertas revigorizado)'] },
-            { question: "¿Has experimentado alteraciones del humor, como irritabilidad, ansiedad o desánimo?", type: 'radio', options: ['Frecuentemente (irritabilidad, ansiedad, desánimo constante)', 'Ocasionalmente (algunos momentos de irritabilidad o desánimo)', 'Raramente (humor estable, pocas alteraciones)', 'Nunca (siempre de buen humor, positivo)'] },
-            { question: "¿Con qué frecuencia sientes deseo sexual (libido)?", type: 'radio', options: ['Casi nunca (libido muy baja o inexistente)', 'Raramente (poco deseo, solo en situaciones específicas)', 'A veces (deseo moderado, varía según el día)', 'Frecuentemente (deseo sexual alto y regular)'] },
-            { question: "¿Cómo evalúas la calidad de tus erecciones?", type: 'radio', options: ['Muy insatisfactoria (dificultad para tener o mantener erecciones)', 'Insatisfactoria (erecciones débiles o inconsistentes)', 'Satisfactoria (erecciones razonables, pero podrían ser mejores)', 'Excelente (erecciones fuertes, duraderas y espontáneas)'] },
-            { question: "¿Has tenido orgasmos satisfactorios e intensos?", type: 'radio', options: ['No (orgasmos débiles o ausentes)', 'Raramente (orgasmos poco intensos)', 'A veces (orgasmos satisfactorios, pero no siempre intensos)', 'Siempre (orgasmos muy intensos y placenteros)'] },
-            { question: "¿Cuál es el tamaño actual de tu pene erecto (en centímetros)?", type: 'radio', options: ['Menos de 12 cm', 'Entre 12 y 14 cm', 'Entre 14 y 16 cm', 'Más de 16 cm'] },
-            { question: "¿Cuántos centímetros te gustaría aumentar en el tamaño de tu pene?", type: 'radio', options: ['1 cm', '2 cm', '3 cm', 'Más de 3 cm'] },
+        // -----------------------------------------------------------------------------------
+        // 1. ESTADO DA APLICAÇÃO (Variáveis que controlam o que aparece na tela)
+        // -----------------------------------------------------------------------------------
+        const appContainer = document.getElementById('app-container');
+        
+        let appState = {
+            currentView: 'hero', // 'hero', 'quiz', 'loading', 'result', 'planos'
+            currentStep: 0,
+            answers: {},
+        };
+
+        const quizQuestions = [
+          {
+            id: "energia",
+            question: "¿Cómo evalúas tu nivel de energía y disposición a lo largo del día?",
+            options: [
+              { value: "muy-bajo", label: "Muy bajo (siempre cansado, falta de iniciativa)" },
+              { value: "bajo", label: "Bajo (cansancio frecuente, dificultad para concentrarse)" },
+              { value: "moderado", label: "Moderado (energía razonable, algunos picos de cansancio)" },
+              { value: "alto", label: "Alto (lleno de energía, productivo todo o día)" },
+            ],
+          },
+          {
+            id: "musculos",
+            question: "¿Has notado cambios en tu masa muscular o dificultad para ganar músculos?",
+            options: [
+              { value: "perdida-significativa", label: "Pérdida significativa de masa muscular" },
+              { value: "dificultad-ganar", label: "Pequeña pérdida o dificultad para ganhar" },
+              { value: "mantenimiento", label: "Mantenimiento de la masa muscular" },
+              { value: "ganancia-facil", label: "Ganancia fácil de masa muscular" },
+            ],
+          },
+            {
+            id: "libido",
+            question: "¿Con qué frecuencia sientes deseo sexual (libido)?",
+            options: [
+              { value: "casi-nunca", label: "Casi nunca (libido muy baja o inexistente)" },
+              { value: "raramente", label: "Raramente (poco deseo, solo en situaciones específicas)" },
+              { value: "a-veces", label: "A veces (deseo moderado, varía según el día)" },
+              { value: "frecuentemente", label: "Frecuentemente (deseo sexual alto y regular)" },
+            ],
+          },
         ];
+        const totalQuizSteps = quizQuestions.length + 1;
 
-        let currentStep = 0;
-        const userAnswers = {};
-        const totalSteps = quizData.length + 1; // 10 perguntas + página 11
-
-        function renderStep() {
-            quizContainer.innerHTML = ''; // Limpa o conteúdo anterior
-            let stepHtml = '';
-
-            // Adiciona a animação ao container principal
-            quizContainer.classList.remove('fade-in');
-            void quizContainer.offsetWidth; // Trigger reflow
-            quizContainer.classList.add('fade-in');
-
-            if (currentStep < quizData.length) {
-                // Renderiza a pergunta atual
-                const questionData = quizData[currentStep];
-                let answersHtml = '';
-
-                if (questionData.type === 'text') {
-                    answersHtml = `<div class="mb-6"><input type="text" id="text-answer" placeholder="${questionData.placeholder}" class="w-full p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white placeholder-gray-400 focus:border-red-500 focus:outline-none transition-colors answer-option" style="animation-delay: 0.1s" value="${userAnswers[currentStep] || ''}"></div>`;
-                } else {
-                    answersHtml = '<div class="space-y-4">';
-                    questionData.options.forEach((opt, index) => {
-                        const isChecked = userAnswers[currentStep] === opt ? 'checked' : '';
-                        answersHtml += `<label class="flex items-center p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white cursor-pointer hover:border-red-500 transition-colors answer-option" style="animation-delay: ${0.1 * (index + 1)}s">
-                                <input type="radio" name="answer" value="${opt}" class="h-5 w-5 text-red-500 bg-gray-700 border-gray-600 focus:ring-red-500 focus:ring-offset-gray-900" ${isChecked}>
-                                <span class="ml-4">${opt}</span></label>`;
-                    });
-                    answersHtml += '</div>';
-                }
-
-                const userName = userAnswers[0] || '';
-                let questionTitle = questionData.question;
-                if (currentStep > 0 && userName) {
-                    questionTitle = `${userName}, ${questionData.question.charAt(0).toLowerCase() + questionData.question.slice(1)}`;
-                }
+        // -----------------------------------------------------------------------------------
+        // 2. ÍCONES SVG (Substituindo os componentes de ícones)
+        // -----------------------------------------------------------------------------------
+        const IconArrowRight = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 ml-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>`;
+        const IconArrowLeft = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>`;
+        const IconCheck = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>`;
 
 
-                stepHtml = `
-                        <div class="w-full mb-8">
-                            <div class="text-center mb-6">
-                                <h1 class="text-2xl md:text-3xl font-bold text-white mb-2">Diagnóstico <span class="text-red-500">Personalizado</span></h1>
-                                <p class="text-gray-400">Pregunta ${currentStep + 1} de ${totalSteps}</p>
-                            </div>
-                            <div class="w-full bg-gray-800 rounded-full h-2 mb-4">
-                                <div class="bg-gradient-to-r from-red-600 to-red-500 h-2 rounded-full" style="width: ${((currentStep + 1) / totalSteps) * 100}%"></div>
-                            </div>
-                            <div class="text-center"><span class="text-sm text-gray-400">${Math.round(((currentStep + 1) / totalSteps) * 100)}% completado</span></div>
-                        </div>
-                        <div class="bg-gray-900 rounded-2xl p-6 border border-gray-800 shadow-xl">
-                            <h2 class="text-xl md:text-2xl font-bold text-white mb-6 text-center leading-tight">${questionTitle}</h2>
-                            ${answersHtml}
-                            <div class="flex ${currentStep > 0 ? 'justify-between' : 'justify-end'} items-center mt-8">
-                                ${currentStep > 0 ? `<button onclick="prevStep()" class="flex items-center px-6 py-3 rounded-lg font-medium transition-all bg-gray-800 text-gray-400 hover:bg-gray-700">Anterior</button>` : ''}
-                                <button onclick="nextStep()" class="flex items-center px-6 py-3 rounded-lg font-medium transition-all bg-red-600 hover:bg-red-700 text-white">Siguiente</button>
-                            </div>
-                        </div>
-                    `;
+        // -----------------------------------------------------------------------------------
+        // 3. FUNÇÕES DE RENDERIZAÇÃO (Criam o HTML para cada tela)
+        // -----------------------------------------------------------------------------------
+
+        // Tela Inicial (Hero)
+        function getHeroHTML() {
+            return `
+            <section class="min-h-screen flex items-center justify-center bg-black overflow-hidden py-12 px-4 fade-in">
+              <div class="container mx-auto z-10 relative max-w-4xl text-center">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-4 slide-in-up">
+                  MÉTODO <span class="text-red-600">TMAX</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8 slide-in-up" style="animation-delay: 0.2s;">
+                  Sinta o poder de até um 400% mais de testosterona em solo 21 días. De forma 100% natural, revive tu energía, vigor y virilidad.
+                </p>
+                <div class="slide-in-up" style="animation-delay: 0.4s;">
+                  <button
+                    onclick="startQuiz()"
+                    class="bg-red-600 text-white font-bold text-lg py-3 px-8 rounded-lg hover:bg-red-700 transition-colors duration-300 flex items-center mx-auto"
+                  >
+                    EVALUAR MI TESTOSTERONA
+                    ${IconArrowRight}
+                  </button>
+                  <p class="text-gray-500 text-sm mt-2">Test personalizado en 2 minutos</p>
+                </div>
+              </div>
+            </section>
+            `;
+        }
+
+        // Tela do Quiz (combina cabeçalho e perguntas)
+        function getQuizHTML() {
+            const progress = ((appState.currentStep + 1) / totalQuizSteps) * 100;
+            let currentQuestionHTML = '';
+
+            // Decide se mostra a pergunta de múltipla escolha ou a de tamanho
+            if (appState.currentStep < quizQuestions.length) {
+                const q = quizQuestions[appState.currentStep];
+                const optionsHTML = q.options.map(opt => `
+                    <button
+                        onclick="handleAnswer('${q.id}', '${opt.value}')"
+                        class="w-full p-4 text-left rounded-xl border-2 transition-all duration-200 
+                               ${appState.answers[q.id] === opt.value ? 'border-red-500 bg-red-500/10 text-white' : 'border-gray-700 bg-gray-800 text-gray-300 hover:border-red-500/50'}"
+                    >
+                        ${opt.label}
+                    </button>
+                `).join('');
+                
+                currentQuestionHTML = `
+                    <h2 class="text-xl md:text-2xl font-bold text-white mb-6 text-center leading-tight">${q.question}</h2>
+                    <div class="space-y-3 mb-6">${optionsHTML}</div>
+                `;
             } else {
-                // Renderiza a página 11 (página final)
-                const userName = userAnswers[0] || 'Amigo';
-                stepHtml = `
-                        <div class="w-full">
-                            <div class="w-full mb-8">
-                                <div class="text-center mb-6">
-                                    <h1 class="text-2xl md:text-3xl font-bold text-white mb-2">Diagnóstico <span class="text-red-500">Personalizado</span></h1>
-                                    <p class="text-gray-400">Pregunta 11 de 11</p>
-                                </div>
-                                <div class="w-full bg-gray-800 rounded-full h-2 mb-4">
-                                    <div class="bg-gradient-to-r from-red-600 to-red-500 h-2 rounded-full" style="width: 100%;"></div>
-                                </div>
-                                <div class="text-center"><span class="text-sm text-gray-400">100% completado</span></div>
-                            </div>
-                            <div class="text-center mb-8">
-                                <h2 class="text-xl md:text-2xl font-bold text-white mb-6 leading-tight">${userName}, ¿Cuánto te gustaría aumentar tu nivel de testosterona en 30 días?</h2>
-                            </div>
-                            <div class="bg-gray-900 rounded-2xl p-6 border border-gray-800 shadow-xl mb-8">
-                                <h3 class="text-xl md:text-2xl font-bold text-white mb-6 text-center leading-tight">Tu Oferta Personalizada</h3>
-                                <div>
-                                    <div class="hidden md:grid md:grid-cols-4 gap-4 text-center font-semibold text-gray-400 mb-4 px-4">
-                                        <span>PROTOCOLO</span> <span>AUMENTO</span> <span>VALOR</span> <span>DESCUENTO</span>
-                                    </div>
-                                    <div class="space-y-4">
-                                        <div class="bg-gray-800 p-4 rounded-lg grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-4 items-center text-sm"><div class="md:hidden font-semibold text-gray-400">PROTOCOLO</div><div class="md:hidden font-semibold text-gray-400 text-right">AUMENTO</div><div class="font-bold text-white text-base md:text-center">400%</div><div class="text-white md:text-center text-right">4.0 cm</div><div class="col-span-2 border-t border-gray-700 my-2 md:hidden"></div><div class="md:hidden font-semibold text-gray-400">VALOR</div><div class="md:hidden font-semibold text-gray-400 text-right">DESCUENTO</div><div class="font-bold text-red-500 text-lg md:text-center">$7</div><div class="text-white md:text-center text-right"><span class="line-through text-gray-500">$17.50</span><span class="text-green-400 font-semibold ml-2">(60% OFF)</span></div></div>
-                                        <div class="bg-gray-800 p-4 rounded-lg grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-4 items-center text-sm"><div class="md:hidden font-semibold text-gray-400">PROTOCOLO</div><div class="md:hidden font-semibold text-gray-400 text-right">AUMENTO</div><div class="font-bold text-white text-base md:text-center">100%</div><div class="text-white md:text-center text-right">2.0 cm</div><div class="col-span-2 border-t border-gray-700 my-2 md:hidden"></div><div class="md:hidden font-semibold text-gray-400">VALOR</div><div class="md:hidden font-semibold text-gray-400 text-right">DESCUENTO</div><div class="font-bold text-red-500 text-lg md:text-center">$6</div><div class="text-white md:text-center text-right"><span class="line-through text-gray-500">$15.00</span><span class="text-green-400 font-semibold ml-2">(60% OFF)</span></div></div>
-                                        <div class="bg-gray-800 p-4 rounded-lg grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-4 items-center text-sm"><div class="md:hidden font-semibold text-gray-400">PROTOCOLO</div><div class="md:hidden font-semibold text-gray-400 text-right">AUMENTO</div><div class="font-bold text-white text-base md:text-center">50%</div><div class="text-white md:text-center text-right">1.0 cm</div><div class="col-span-2 border-t border-gray-700 my-2 md:hidden"></div><div class="md:hidden font-semibold text-gray-400">VALOR</div><div class="md:hidden font-semibold text-gray-400 text-right">DESCUENTO</div><div class="font-bold text-red-500 text-lg md:text-center">$5</div><div class="text-white md:text-center text-right"><span class="line-through text-gray-500">$12.50</span><span class="text-green-400 font-semibold ml-2">(60% OFF)</span></div></div>
-                                        <div class="bg-gray-800 p-4 rounded-lg grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-4 items-center text-sm"><div class="md:hidden font-semibold text-gray-400">PROTOCOLO</div><div class="md:hidden font-semibold text-gray-400 text-right">AUMENTO</div><div class="font-bold text-white text-base md:text-center">25%</div><div class="text-white md:text-center text-right">0.5 cm</div><div class="col-span-2 border-t border-gray-700 my-2 md:hidden"></div><div class="md:hidden font-semibold text-gray-400">VALOR</div><div class="md:hidden font-semibold text-gray-400 text-right">DESCUENTO</div><div class="font-bold text-red-500 text-lg md:text-center">$4</div><div class="text-white md:text-center text-right"><span class="line-through text-gray-500">$10.00</span><span class="text-green-400 font-semibold ml-2">(60% OFF)</span></div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <label class="flex items-center p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white cursor-pointer hover:border-red-500 transition-colors answer-option" style="animation-delay: 0.1s"><input type="radio" name="oferta" class="h-5 w-5 text-red-500 bg-gray-700 border-gray-600"><span class="ml-4">25% (Potencial de aumento de 0.5 cm de lápiz)</span></label>
-                                <label class="flex items-center p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white cursor-pointer hover:border-red-500 transition-colors answer-option" style="animation-delay: 0.2s"><input type="radio" name="oferta" class="h-5 w-5 text-red-500 bg-gray-700 border-gray-600"><span class="ml-4">50% (Potencial de aumento de 1.0 cm de lápiz)</span></label>
-                                <label class="flex items-center p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white cursor-pointer hover:border-red-500 transition-colors answer-option" style="animation-delay: 0.3s"><input type="radio" name="oferta" class="h-5 w-5 text-red-500 bg-gray-700 border-gray-600"><span class="ml-4">100% (Potencial de aumento de 2.0 cm de lápiz)</span></label>
-                                <label class="flex items-center p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white cursor-pointer hover:border-red-500 transition-colors answer-option" style="animation-delay: 0.4s"><input type="radio" name="oferta" class="h-5 w-5 text-red-500 bg-gray-700 border-gray-600"><span class="ml-4">400% (Potencial de aumento de 4.0 cm de lápiz)</span></label>
-                            </div>
-                             <div class="flex justify-between items-center mt-8">
-                                <button onclick="prevStep()" class="flex items-center px-6 py-3 rounded-lg font-medium transition-all bg-gray-800 text-gray-400 hover:bg-gray-700">Anterior</button>
-                                <button onclick="submitQuiz()" class="flex items-center px-6 py-3 rounded-lg font-medium transition-all bg-green-600 hover:bg-green-700 text-white">Finalizar Pedido</button>
-                            </div>
-                        </div>
-                    `;
+                currentQuestionHTML = `
+                    <h2 class="text-xl md:text-2xl font-bold text-white mb-6 text-center leading-tight">
+                        ¿Cuál es el tamaño actual de tu lápiz en erección (en cm)?
+                    </h2>
+                    <div class="mb-6">
+                        <input
+                            type="number"
+                            id="height-input"
+                            value="${appState.answers.height || ''}"
+                            oninput="handleHeightChange(this.value)"
+                            placeholder="Ingresa el tamaño en cm"
+                            class="w-full p-4 text-center text-2xl font-bold bg-gray-800 border-2 border-gray-700 rounded-xl text-white placeholder-gray-400 focus:border-red-500 focus:outline-none transition-colors"
+                        />
+                    </div>
+                `;
             }
-            quizContainer.innerHTML = stepHtml;
+
+            return `
+            <div class="min-h-screen flex flex-col items-center justify-center py-12 px-4 fade-in">
+                <div class="w-full max-w-2xl mx-auto mb-8">
+                    <div class="text-center mb-6">
+                        <h1 class="text-2xl md:text-3xl font-bold text-white mb-2">
+                            Diagnóstico <span class="text-red-500">Personalizado</span>
+                        </h1>
+                        <p class="text-gray-400">Pregunta ${appState.currentStep + 1} de ${totalQuizSteps}</p>
+                    </div>
+                    <div class="w-full bg-gray-800 rounded-full h-2 mb-4">
+                        <div class="bg-gradient-to-r from-red-600 to-red-500 h-2 rounded-full" style="width: ${progress}%; transition: width 0.5s ease-out;"></div>
+                    </div>
+                    <div class="text-center"><span class="text-sm text-gray-400">${Math.round(progress)}% completado</span></div>
+                </div>
+
+                <div class="w-full max-w-2xl mx-auto bg-gray-900 rounded-2xl p-6 border border-gray-800 shadow-xl">
+                    ${currentQuestionHTML}
+                    <div class="flex justify-between items-center mt-8">
+                        ${appState.currentStep > 0 ? `<button onclick="handleBack()" class="flex items-center px-4 py-2 text-gray-400 hover:text-white transition-colors">${IconArrowLeft} Anterior</button>` : '<div></div>'}
+                        ${appState.currentStep === totalQuizSteps - 1 ? `<button onclick="handleNext()" ${!appState.answers.height ? 'disabled' : ''} class="flex items-center px-6 py-3 rounded-lg font-medium transition-all ${appState.answers.height ? 'bg-red-600 hover:bg-red-700 text-white' : 'bg-gray-700 text-gray-400 cursor-not-allowed'}">Analizar Resultados ${IconArrowRight}</button>` : ''}
+                    </div>
+                </div>
+            </div>
+            `;
         }
 
-        function nextStep() {
-            if (currentStep < quizData.length) {
-                const questionData = quizData[currentStep];
-                let answer;
-                if (questionData.type === 'text') {
-                    answer = document.getElementById('text-answer').value.trim();
-                    if (!answer) {
-                        // Poderia adicionar uma mensagem de erro aqui
-                        return;
-                    }
+        // Tela de Carregamento
+        function getLoadingHTML() {
+            // Inicia a lógica de progresso quando esta tela for renderizada
+            setTimeout(startLoadingProgress, 100); 
+            return `
+            <div class="min-h-screen bg-black flex items-center justify-center p-4 fade-in">
+              <div class="w-full max-w-2xl">
+                <div class="text-center mb-8">
+                  <h1 class="text-2xl md:text-3xl font-bold text-white mb-2">
+                    Analizando Tu Potencial de <span class="text-red-500">Testosterona</span>
+                  </h1>
+                  <p class="text-gray-300">Estamos creando tu protocolo de maximización...</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 shadow-xl">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="text-sm font-medium text-gray-300">Progreso del Análisis</span>
+                    <span id="progress-percent" class="text-sm font-medium text-red-500">0%</span>
+                  </div>
+                  <div class="w-full bg-gray-700 rounded-full h-3 mb-6">
+                    <div id="progress-bar" class="bg-gradient-to-r from-red-600 to-red-500 h-3 rounded-full" style="width: 0%; transition: width 0.1s linear;"></div>
+                  </div>
+                  <div id="progress-step-text" class="text-center text-white font-medium">Analizando tu perfil hormonal...</div>
+                </div>
+              </div>
+            </div>`;
+        }
+        
+        // Tela de Resultado
+        function getResultHTML() {
+            return `
+            <div class="min-h-screen bg-black flex items-center justify-center p-4 fade-in">
+              <div class="w-full max-w-2xl text-center">
+                <div class="mb-6">
+                  <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">
+                    Tu Resultado <span class="text-red-500">Personalizado</span>
+                  </h1>
+                  <p class="text-gray-300">Basado en tu análisis, este es tu potencial de optimización hormonal.</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 shadow-xl mb-6">
+                  <div class="mb-6">
+                    <p class="text-gray-400">Puedes aumentar hasta un</p>
+                    <p class="text-5xl font-bold text-red-500 my-2">400%</p>
+                    <p class="text-xl text-white">tu testosterona en 30 días</p>
+                  </div>
+                  <button
+                    onclick="goToPlanos()"
+                    class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 shadow-lg"
+                  >
+                    COMENZAR MI PROTOCOLO PERSONALIZADO
+                  </button>
+                </div>
+              </div>
+            </div>`;
+        }
+
+        // Tela de Planos (Oferta Final)
+        function getPlanosHTML() {
+            const checkoutUrl = "https://pay.hotmart.com/L101274511Q?checkoutMode=10";
+            const features = [
+                "Protocolo completo Método Tmax de 21 días", "Rutina de ejercicios específicos para testosterona", "Plan nutricional para optimización hormonal",
+                "Guía de suplementación natural", "Técnicas de manejo del estrés y cortisol", "Protocolo de sueño para máxima recuperación",
+                "Acceso a la comunidad privada", "Soporte 24/7 por WhatsApp", "Garantía de resultados en 30 días",
+            ];
+            const featuresHTML = features.map(f => `
+                <div class="flex items-center">${IconCheck} <span class="text-gray-300">${f}</span></div>
+            `).join('');
+
+            return `
+            <div class="min-h-screen bg-black py-12 px-4 fade-in">
+              <div class="max-w-2xl mx-auto">
+                <div class="text-center mb-8">
+                  <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Acceso Completo al <span class="text-red-500">Método Tmax</span></h1>
+                  <p class="text-lg text-gray-300">Aumenta tu testosterona naturalmente con nuestro protocolo comprobado.</p>
+                </div>
+                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800">
+                  <div class="space-y-4 mb-8">${featuresHTML}</div>
+                  <a href="${checkoutUrl}" target="_blank" rel="noopener noreferrer"
+                    class="block w-full text-center bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 text-white font-bold py-4 px-8 rounded-xl text-xl transition-all duration-200 shadow-lg">
+                    AUMENTAR MI TESTOSTERONA AHORA
+                  </a>
+                  <p class="text-center text-gray-500 text-sm mt-4">Pago seguro procesado por Hotmart</p>
+                </div>
+              </div>
+            </div>`;
+        }
+
+
+        // -----------------------------------------------------------------------------------
+        // 4. LÓGICA DE CONTROLE (Funções que mudam o estado e atualizam a tela)
+        // -----------------------------------------------------------------------------------
+
+        // Função principal que desenha a tela correta
+        function render() {
+            window.scrollTo(0, 0); // Rola para o topo a cada mudança de tela
+            switch (appState.currentView) {
+                case 'hero':
+                    appContainer.innerHTML = getHeroHTML();
+                    break;
+                case 'quiz':
+                    appContainer.innerHTML = getQuizHTML();
+                    break;
+                case 'loading':
+                    appContainer.innerHTML = getLoadingHTML();
+                    break;
+                case 'result':
+                    appContainer.innerHTML = getResultHTML();
+                    break;
+                case 'planos':
+                    appContainer.innerHTML = getPlanosHTML();
+                    break;
+            }
+        }
+        
+        // Funções de evento chamadas pelos botões no HTML
+        function startQuiz() {
+            appState.currentView = 'quiz';
+            render();
+        }
+        
+        function handleNext() {
+            if (appState.currentStep < totalQuizSteps - 1) {
+                appState.currentStep++;
+                render();
+            } else {
+                appState.currentView = 'loading';
+                render();
+            }
+        }
+
+        function handleBack() {
+            if (appState.currentStep > 0) {
+                appState.currentStep--;
+                render();
+            }
+        }
+        
+        function handleAnswer(questionId, value) {
+            appState.answers[questionId] = value;
+            // Avança automaticamente após um pequeno delay
+            setTimeout(handleNext, 300);
+        }
+
+        function handleHeightChange(value) {
+            const numValue = parseInt(value, 10);
+            if (!isNaN(numValue) && numValue > 0 && numValue < 50) {
+                appState.answers.height = numValue;
+            } else {
+                appState.answers.height = null;
+            }
+            // Re-renderiza para habilitar/desabilitar o botão
+            render();
+        }
+        
+        function goToPlanos() {
+            appState.currentView = 'planos';
+            render();
+        }
+
+        function startLoadingProgress() {
+            let progress = 0;
+            const steps = [ "Analizando tu perfil hormonal...", "Calculando tu potencial de aumento...", "Generando tu plan personalizado...", "Finalizando tu diagnóstico..." ];
+            let currentStepIndex = 0;
+
+            const progressBar = document.getElementById('progress-bar');
+            const progressPercent = document.getElementById('progress-percent');
+            const progressStepText = document.getElementById('progress-step-text');
+            
+            const progressInterval = setInterval(() => {
+                progress++;
+                if (progressBar) progressBar.style.width = `${progress}%`;
+                if (progressPercent) progressPercent.innerText = `${progress}%`;
+                if (progress >= 100) {
+                    clearInterval(progressInterval);
+                    appState.currentView = 'result';
+                    render();
+                }
+            }, 80); // 8 segundos de duração total
+
+            const stepInterval = setInterval(() => {
+                currentStepIndex++;
+                if (progressStepText && currentStepIndex < steps.length) {
+                    progressStepText.innerText = steps[currentStepIndex];
                 } else {
-                    const radio = document.querySelector('input[name="answer"]:checked');
-                    if (!radio) {
-                        // Validação para garantir que uma opção foi selecionada
-                        return;
-                    }
-                    answer = radio.value;
+                    clearInterval(stepInterval);
                 }
-                userAnswers[currentStep] = answer;
-            }
-            currentStep++;
-            renderStep();
+            }, 2000); // Muda o texto a cada 2 segundos
         }
 
-        function prevStep() {
-            if (currentStep > 0) {
-                currentStep--;
-                renderStep();
-            }
-        }
+        // -----------------------------------------------------------------------------------
+        // 5. INICIALIZAÇÃO (Mostra a primeira tela quando a página carrega)
+        // -----------------------------------------------------------------------------------
+        document.addEventListener('DOMContentLoaded', render);
 
-        function submitQuiz() {
-            const selectedOffer = document.querySelector('input[name="oferta"]:checked');
-            if (!selectedOffer) {
-                alert('Por favor, seleccione una oferta para continuar.');
-                return;
-            }
-            // Ação de finalização (aqui poderia redirecionar ou enviar os dados)
-            alert('¡Gracias por completar el diagnóstico! Serás redirigido en breve.');
-        }
-
-        function startCountdown(duration, display) {
-            let timer = duration, hours, minutes, seconds;
-            setInterval(function () {
-                hours = parseInt(timer / 3600, 10);
-                minutes = parseInt((timer % 3600) / 60, 10);
-                seconds = parseInt(timer % 60, 10);
-
-                hours = hours < 10 ? "0" + hours : hours;
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                display.textContent = hours + ":" + minutes + ":" + seconds;
-
-                if (--timer < 0) {
-                    timer = 0;
-                }
-            }, 1000);
-        }
-
-        // Inicia o quiz e o contador
-        document.addEventListener('DOMContentLoaded', function () {
-            renderStep();
-            const countdownDisplay = document.querySelector('#countdown');
-            if (countdownDisplay) {
-                const oneHourFiftyFiveMinutes = (1 * 60 * 60) + (55 * 60) + 56;
-                startCountdown(oneHourFiftyFiveMinutes, countdownDisplay);
-            }
-        });
     </script>
-
-
-
-
-</body></html>
+</body>
+</html>
