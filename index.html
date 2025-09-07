@@ -178,4 +178,97 @@
 
         function getLoadingHTML() {
             setTimeout(startLoadingProgress, 100); 
-            return `<div class="min-h-screen bg-black flex items-center justify-center p-4 fade-in"><div class="w-full max-w-2xl"><div class="text-center mb-8"><h1 class="text-2xl md:text-3xl font-bold text-white mb-2">Analizando Tu Potencial de <span class="text-red-500">Testosterona</span></h1><p class="text-gray-300">Estamos creando tu protocolo de maximización...</p></div><div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 shadow-xl"><div class="flex justify-between items-center mb-2"><span class="text-sm font-medium text-gray-300">Progreso del Análisis</span><span id="progress-percent" class="text-sm font-medium text-red-500">0%</span></div><div class="w-full bg-gray-700 rounded-full h-3 mb-6"><div id="progress-bar" class="bg-gradient-to-r from-red-600 to-red-500 h-3
+            return `<div class="min-h-screen bg-black flex items-center justify-center p-4 fade-in"><div class="w-full max-w-2xl"><div class="text-center mb-8"><h1 class="text-2xl md:text-3xl font-bold text-white mb-2">Analizando Tu Potencial de <span class="text-red-500">Testosterona</span></h1><p class="text-gray-300">Estamos creando tu protocolo de maximización...</p></div><div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 shadow-xl"><div class="flex justify-between items-center mb-2"><span class="text-sm font-medium text-gray-300">Progreso del Análisis</span><span id="progress-percent" class="text-sm font-medium text-red-500">0%</span></div><div class="w-full bg-gray-700 rounded-full h-3 mb-6"><div id="progress-bar" class="bg-gradient-to-r from-red-600 to-red-500 h-3 rounded-full" style="width: 0%; transition: width 0.1s linear;"></div></div><div id="progress-step-text" class="text-center text-white font-medium">Analizando tu perfil hormonal...</div></div></div></div>`;
+        }
+        
+        function getResultHTML() {
+            return `<div class="min-h-screen bg-black flex items-center justify-center p-4 fade-in"><div class="w-full max-w-2xl text-center"><div class="mb-6"><h1 class="text-3xl md:text-4xl font-bold text-white mb-2">Tu Resultado <span class="text-red-500">Personalizado</span></h1><p class="text-gray-300">Basado en tu análisis, este es tu potencial de optimización hormonal.</p></div><div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 shadow-xl mb-6"><div class="mb-6"><p class="text-gray-400">Puedes aumentar hasta un</p><p class="text-5xl font-bold text-red-500 my-2">400%</p><p class="text-xl text-white">tu testosterona en 30 días</p></div><button onclick="goToPlanos()" class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 shadow-lg">COMENZAR MI PROTOCOLO PERSONALIZADO</button></div></div></div>`;
+        }
+
+        function getPlanosHTML() {
+            const checkoutUrl = "https://pay.hotmart.com/L101274511Q?checkoutMode=10";
+            const features = ["Protocolo completo Método Tmax de 21 días", "Rutina de ejercicios específicos para testosterona", "Plan nutricional para optimización hormonal", "Guía de suplementación natural", "Técnicas de manejo del estrés y cortisol", "Protocolo de sueño para máxima recuperación", "Acceso a la comunidad privada", "Soporte 24/7 por WhatsApp", "Garantía de resultados en 30 días"];
+            const featuresHTML = features.map(f => `<div class="flex items-center">${IconCheck} <span class="text-gray-300">${f}</span></div>`).join('');
+            return `<div class="fade-in"><div class="min-h-screen bg-black py-20 px-4"><div class="max-w-2xl mx-auto"><div class="text-center mb-8"><h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Acceso Completo al <span class="text-red-500">Método Tmax</span></h1><p class="text-lg text-gray-300">Aumenta tu testosterona naturalmente con nuestro protocolo comprobado.</p></div><div class="bg-gray-900 rounded-2xl p-8 border border-gray-800"><div class="space-y-4 mb-8">${featuresHTML}</div><a href="${checkoutUrl}" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 text-white font-bold py-4 px-8 rounded-xl text-xl transition-all duration-200 shadow-lg">AUMENTAR MI TESTOSTERONA AHORA</a><p class="text-center text-gray-500 text-sm mt-4">Pago seguro procesado por Hotmart</p></div></div></div>${getFooterHTML()}</div>`;
+        }
+
+        // 4. LÓGICA DE CONTROLE
+        function render() {
+            window.scrollTo(0, 0);
+            const viewMap = {
+                hero: getHeroHTML,
+                quiz: getQuizHTML,
+                loading: getLoadingHTML,
+                result: getResultHTML,
+                planos: getPlanosHTML
+            };
+            appContainer.innerHTML = viewMap[appState.currentView]();
+        }
+        
+        function startQuiz() { appState.currentView = 'quiz'; render(); }
+        function goToPlanos() { appState.currentView = 'planos'; render(); }
+        
+        function handleNext() {
+            if (appState.currentStep < totalQuizSteps - 1) {
+                appState.currentStep++;
+            } else {
+                appState.currentView = 'loading';
+            }
+            render();
+        }
+
+        function handleBack() {
+            if (appState.currentStep > 0) {
+                appState.currentStep--;
+                render();
+            }
+        }
+        
+        function handleAnswer(questionId, value) {
+            appState.answers[questionId] = value;
+            setTimeout(handleNext, 300);
+        }
+
+        function handleTextChange(questionId, value) {
+            appState.answers[questionId] = value.trim();
+            render();
+        }
+
+        function handleHeightChange(value) {
+            const numValue = parseInt(value, 10);
+            appState.answers.height = (!isNaN(numValue) && numValue > 0 && numValue < 50) ? numValue : null;
+            render();
+        }
+        
+        function startLoadingProgress() {
+            let progress = 0;
+            const steps = [ "Analizando tu perfil hormonal...", "Calculando tu potencial de aumento...", "Generando tu plan personalizado...", "Finalizando tu diagnóstico..." ];
+            let currentStepIndex = 0;
+            const progressBar = document.getElementById('progress-bar');
+            const progressPercent = document.getElementById('progress-percent');
+            const progressStepText = document.getElementById('progress-step-text');
+            const progressInterval = setInterval(() => {
+                progress++;
+                if (progressBar) progressBar.style.width = `${progress}%`;
+                if (progressPercent) progressPercent.innerText = `${progress}%`;
+                if (progress >= 100) {
+                    clearInterval(progressInterval);
+                    appState.currentView = 'result';
+                    render();
+                }
+            }, 80);
+            const stepInterval = setInterval(() => {
+                currentStepIndex++;
+                if (progressStepText && currentStepIndex < steps.length) {
+                    progressStepText.innerText = steps[currentStepIndex];
+                } else {
+                    clearInterval(stepInterval);
+                }
+            }, 2000);
+        }
+
+        // 5. INICIALIZAÇÃO
+        document.addEventListener('DOMContentLoaded', render);
+    </script>
+</body>
+</html>
