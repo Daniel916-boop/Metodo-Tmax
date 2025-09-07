@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="es" class="dark" style="color-scheme: dark;"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Tmax - Diagnóstico Personalizado</title>
+    <!-- Incluindo o Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Incluindo a fonte Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        /* Estilo para animação de fade-in */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        /* Animação para as opções de resposta */
+        .answer-option {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="__className_e8ce0c">
+
+    <!-- Banner de Oferta Relâmpago -->
+    <div id="offer-banner" class="w-full bg-red-600 text-white text-center py-2 text-sm font-bold relative">
+        <p class="mb-1">¡OFERTA RELÁMPAGO: 60% DE DESCUENTO! Termina en: <span id="countdown" class="font-mono text-lg">01:55:56</span></p>
+        <p class="text-xs opacity-80">¡Esta oferta ha estado activa durante 2 semanas y hoy es el último día!</p>
+    </div>
+
+    <div class="min-h-screen flex items-center justify-center py-8 px-4">
+        <div id="quiz-container" class="w-full max-w-2xl mx-auto">
+            <!-- O conteúdo do quiz será injetado aqui -->
+        </div>
+    </div>
+
+    <!-- Estrutura original dos scripts do Next.js mantida no final do body -->
+    <script src="js/webpack-70d85ae7a770901.js" async=""></script>
+    <script>
+        (self.__next_f = self.__next_f || []).push([0])
+    </script>
+    <script>
+        self.__next_f.push([1, "1:\"$Sreact.fragment\"\n2:I[7995,[\"177\",\"static/chunks/app/layout-726e38ce2395a9df.js\"],\"default\"]\n3:I[1507,[\"177\",\"static/chunks/app/layout-726e38ce2395a9df.js\"],\"ThemeProvider\"]\n4:I[6012,[],\"\"]\n5:I[3690,[],\"\"]\n6:I[4777,[],\"ClientPageRoot\"]\n7:I[6894,[\"570\",\"static/chunks/570-894dd62cee7abcef.js\",\"602\",\"static/chunks/app/quiz/page-eeaa88bc53164d66.js\"],\"default\"]\na:I[6236,[],\"OutletBoundary\"]\nd:I[6236,[],\"ViewportBoundary\"]\nf:I[6236,[],\"MetadataBoundary\"]\n11:I[2691,[],\"\"]\n:HL[\"/_next/static/media/e4af272ccee01ff0-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/css/25ef6bba9d44b375.css\",\"style\"]\n"])
+    </script>
+    <script>
+        self.__next_f.push([1, "0:{\"P\":null,\"b\":\"J76rP_-rZHLAqSxi4Oyun\",\"p\":\"\",\"c\":[\"\",\"quiz\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"quiz\",{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/25ef6bba9d44b375.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"es\",\"suppressHydrationWarning\":true,\"children\":[[\"$\",\"head\",null,{\"children\":[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap\",\"rel\":\"stylesheet\"}]}],[\"$\",\"body\",null,{\"className\":\"__className_e8ce0c\",\"children\":[[\"$\",\"$L2\",null,{}],[\"$\",\"$L3\",null,{\"attribute\":\"class\",\"defaultTheme\":\"dark\",\"enableSystem\":true,\"disableTransitionOnChange\":true,\"children\":[\"$\",\"$L4\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L5\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]]}]]}]]}],{\"children\":[\"quiz\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L4\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L5\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L6\",null,{\"Component\":\"$7\",\"searchParams\":{},\"params\":{},\"promises\":[\"$@8\",\"$@9\"]}],\"$undefined\",null,[\"$\",\"$La\",null,{\"children\":[\"$Lb\",\"$Lc\",null]}]]}],{},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"rFH0P5Q58gAEefnCbd9gl\",{\"children\":[[\"$\",\"$Ld\",null,{\"children\":\"$Le\"}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}],[\"$\",\"$Lf\",null,{\"children\":\"$L10\"}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$11\",\"$undefined\"],\"s\":false,\"S\":true}\n"])
+    </script>
+    <script>
+        self.__next_f.push([1, "8:{}\n9:{}\n"])
+    </script>
+    <script>
+        self.__next_f.push([1, "e:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\nb:null\n"])
+    </script>
+    <script>
+        self.__next_f.push([1, "c:null\n10:[[\"$\",\"title\",\"0\",{\"children\":\"Método Tmax - Desbloqueie seu tamanho real em 30 dias\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Ganhe de 3 a 8 cm de tamanho em apenas 30 dias com o Método Tmax. Protocolo biomecânico personalizado que libera seu tamanho real bloqueado por má circulação.\"}],[\"$\",\"meta\",\"2\",{\"name\":\"generator\",\"content\":\"v0.dev\"}]]\n"])
+    </script>
+
+    <script>
+        // Lógica do Quiz
+        const quizContainer = document.getElementById('quiz-container');
+        const offerBanner = document.getElementById('offer-banner');
+
+        const quizData = [
+            { question: "¿Cuál es tu nombre?", type: 'text', placeholder: 'Escribe tu respuesta aquí...' },
+            { question: "¿Cómo evalúas tu nivel de energía y disposición a lo largo del día?", type: 'radio', options: ['Muy bajo (siempre cansado, falta de iniciativa)', 'Bajo (cansancio frecuente, dificultad para concentrarse)', 'Moderado (energía razonable, algunos picos de cansancio)', 'Alto (lleno de energía, productivo todo el día)'] },
+            { question: "¿Has notado cambios en tu masa muscular o dificultad para ganar músculos, incluso entrenando?", type: 'radio', options: ['Pérdida significativa de masa muscular', 'Pequeña pérdida o dificultad para ganhar', 'Mantenimiento de la masa muscular', 'Ganancia fácil de masa muscular'] },
+            { question: "¿Cómo está la calidad de tu sueño? ¿Te despiertas descansado?", type: 'radio', options: ['Muy mala (insomnio, sueño agitado, despiertas agotado)', 'Mala (dificultad para dormir, sueño ligero)', 'Regular (duermes, pero no siempre despiertas totalmente descansado)', 'Buena (duermes profundamente, despiertas revigorizado)'] },
+            { question: "¿Has experimentado alteraciones del humor, como irritabilidad, ansiedad o desánimo?", type: 'radio', options: ['Frecuentemente (irritabilidad, ansiedad, desánimo constante)', 'Ocasionalmente (algunos momentos de irritabilidad o desánimo)', 'Raramente (humor estable, pocas alteraciones)', 'Nunca (siempre de buen humor, positivo)'] },
+            { question: "¿Con qué frecuencia sientes deseo sexual (libido)?", type: 'radio', options: ['Casi nunca (libido muy baja o inexistente)', 'Raramente (poco deseo, solo en situaciones específicas)', 'A veces (deseo moderado, varía según el día)', 'Frecuentemente (deseo sexual alto y regular)'] },
+            { question: "¿Cómo evalúas la calidad de tus erecciones?", type: 'radio', options: ['Muy insatisfactoria (dificultad para tener o mantener erecciones)', 'Insatisfactoria (erecciones débiles o inconsistentes)', 'Satisfactoria (erecciones razonables, pero podrían ser mejores)', 'Excelente (erecciones fuertes, duraderas y espontáneas)'] },
+            { question: "¿Has tenido orgasmos satisfactorios e intensos?", type: 'radio', options: ['No (orgasmos débiles o ausentes)', 'Raramente (orgasmos poco intensos)', 'A veces (orgasmos satisfactorios, pero no siempre intensos)', 'Siempre (orgasmos muy intensos y placenteros)'] },
+            { question: "¿Cuál es el tamaño actual de tu pene erecto (en centímetros)?", type: 'radio', options: ['Menos de 12 cm', 'Entre 12 y 14 cm', 'Entre 14 y 16 cm', 'Más de 16 cm'] },
+            { question: "¿Cuántos centímetros te gustaría aumentar en el tamaño de tu pene?", type: 'radio', options: ['1 cm', '2 cm', '3 cm', 'Más de 3 cm'] },
+        ];
+
+        let currentStep = 0;
+        const userAnswers = {};
+        const totalSteps = quizData.length + 1; // 10 perguntas + página 11
+
+        function renderStep() {
+            quizContainer.innerHTML = ''; // Limpa o conteúdo anterior
+            let stepHtml = '';
+
+            // Adiciona a animação ao container principal
+            quizContainer.classList.remove('fade-in');
+            void quizContainer.offsetWidth; // Trigger reflow
+            quizContainer.classList.add('fade-in');
+
+            if (currentStep < quizData.length) {
+                // Renderiza a pergunta atual
+                const questionData = quizData[currentStep];
+                let answersHtml = '';
+
+                if (questionData.type === 'text') {
+                    answersHtml = `<div class="mb-6"><input type="text" id="text-answer" placeholder="${questionData.placeholder}" class="w-full p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white placeholder-gray-400 focus:border-red-500 focus:outline-none transition-colors answer-option" style="animation-delay: 0.1s" value="${userAnswers[currentStep] || ''}"></div>`;
+                } else {
+                    answersHtml = '<div class="space-y-4">';
+                    questionData.options.forEach((opt, index) => {
+                        const isChecked = userAnswers[currentStep] === opt ? 'checked' : '';
+                        answersHtml += `<label class="flex items-center p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white cursor-pointer hover:border-red-500 transition-colors answer-option" style="animation-delay: ${0.1 * (index + 1)}s">
+                                <input type="radio" name="answer" value="${opt}" class="h-5 w-5 text-red-500 bg-gray-700 border-gray-600 focus:ring-red-500 focus:ring-offset-gray-900" ${isChecked}>
+                                <span class="ml-4">${opt}</span></label>`;
+                    });
+                    answersHtml += '</div>';
+                }
+
+                const userName = userAnswers[0] || '';
+                let questionTitle = questionData.question;
+                if (currentStep > 0 && userName) {
+                    questionTitle = `${userName}, ${questionData.question.charAt(0).toLowerCase() + questionData.question.slice(1)}`;
+                }
+
+
+                stepHtml = `
+                        <div class="w-full mb-8">
+                            <div class="text-center mb-6">
+                                <h1 class="text-2xl md:text-3xl font-bold text-white mb-2">Diagnóstico <span class="text-red-500">Personalizado</span></h1>
+                                <p class="text-gray-400">Pregunta ${currentStep + 1} de ${totalSteps}</p>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2 mb-4">
+                                <div class="bg-gradient-to-r from-red-600 to-red-500 h-2 rounded-full" style="width: ${((currentStep + 1) / totalSteps) * 100}%"></div>
+                            </div>
+                            <div class="text-center"><span class="text-sm text-gray-400">${Math.round(((currentStep + 1) / totalSteps) * 100)}% completado</span></div>
+                        </div>
+                        <div class="bg-gray-900 rounded-2xl p-6 border border-gray-800 shadow-xl">
+                            <h2 class="text-xl md:text-2xl font-bold text-white mb-6 text-center leading-tight">${questionTitle}</h2>
+                            ${answersHtml}
+                            <div class="flex ${currentStep > 0 ? 'justify-between' : 'justify-end'} items-center mt-8">
+                                ${currentStep > 0 ? `<button onclick="prevStep()" class="flex items-center px-6 py-3 rounded-lg font-medium transition-all bg-gray-800 text-gray-400 hover:bg-gray-700">Anterior</button>` : ''}
+                                <button onclick="nextStep()" class="flex items-center px-6 py-3 rounded-lg font-medium transition-all bg-red-600 hover:bg-red-700 text-white">Siguiente</button>
+                            </div>
+                        </div>
+                    `;
+            } else {
+                // Renderiza a página 11 (página final)
+                const userName = userAnswers[0] || 'Amigo';
+                stepHtml = `
+                        <div class="w-full">
+                            <div class="w-full mb-8">
+                                <div class="text-center mb-6">
+                                    <h1 class="text-2xl md:text-3xl font-bold text-white mb-2">Diagnóstico <span class="text-red-500">Personalizado</span></h1>
+                                    <p class="text-gray-400">Pregunta 11 de 11</p>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 mb-4">
+                                    <div class="bg-gradient-to-r from-red-600 to-red-500 h-2 rounded-full" style="width: 100%;"></div>
+                                </div>
+                                <div class="text-center"><span class="text-sm text-gray-400">100% completado</span></div>
+                            </div>
+                            <div class="text-center mb-8">
+                                <h2 class="text-xl md:text-2xl font-bold text-white mb-6 leading-tight">${userName}, ¿Cuánto te gustaría aumentar tu nivel de testosterona en 30 días?</h2>
+                            </div>
+                            <div class="bg-gray-900 rounded-2xl p-6 border border-gray-800 shadow-xl mb-8">
+                                <h3 class="text-xl md:text-2xl font-bold text-white mb-6 text-center leading-tight">Tu Oferta Personalizada</h3>
+                                <div>
+                                    <div class="hidden md:grid md:grid-cols-4 gap-4 text-center font-semibold text-gray-400 mb-4 px-4">
+                                        <span>PROTOCOLO</span> <span>AUMENTO</span> <span>VALOR</span> <span>DESCUENTO</span>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div class="bg-gray-800 p-4 rounded-lg grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-4 items-center text-sm"><div class="md:hidden font-semibold text-gray-400">PROTOCOLO</div><div class="md:hidden font-semibold text-gray-400 text-right">AUMENTO</div><div class="font-bold text-white text-base md:text-center">400%</div><div class="text-white md:text-center text-right">4.0 cm</div><div class="col-span-2 border-t border-gray-700 my-2 md:hidden"></div><div class="md:hidden font-semibold text-gray-400">VALOR</div><div class="md:hidden font-semibold text-gray-400 text-right">DESCUENTO</div><div class="font-bold text-red-500 text-lg md:text-center">$7</div><div class="text-white md:text-center text-right"><span class="line-through text-gray-500">$17.50</span><span class="text-green-400 font-semibold ml-2">(60% OFF)</span></div></div>
+                                        <div class="bg-gray-800 p-4 rounded-lg grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-4 items-center text-sm"><div class="md:hidden font-semibold text-gray-400">PROTOCOLO</div><div class="md:hidden font-semibold text-gray-400 text-right">AUMENTO</div><div class="font-bold text-white text-base md:text-center">100%</div><div class="text-white md:text-center text-right">2.0 cm</div><div class="col-span-2 border-t border-gray-700 my-2 md:hidden"></div><div class="md:hidden font-semibold text-gray-400">VALOR</div><div class="md:hidden font-semibold text-gray-400 text-right">DESCUENTO</div><div class="font-bold text-red-500 text-lg md:text-center">$6</div><div class="text-white md:text-center text-right"><span class="line-through text-gray-500">$15.00</span><span class="text-green-400 font-semibold ml-2">(60% OFF)</span></div></div>
+                                        <div class="bg-gray-800 p-4 rounded-lg grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-4 items-center text-sm"><div class="md:hidden font-semibold text-gray-400">PROTOCOLO</div><div class="md:hidden font-semibold text-gray-400 text-right">AUMENTO</div><div class="font-bold text-white text-base md:text-center">50%</div><div class="text-white md:text-center text-right">1.0 cm</div><div class="col-span-2 border-t border-gray-700 my-2 md:hidden"></div><div class="md:hidden font-semibold text-gray-400">VALOR</div><div class="md:hidden font-semibold text-gray-400 text-right">DESCUENTO</div><div class="font-bold text-red-500 text-lg md:text-center">$5</div><div class="text-white md:text-center text-right"><span class="line-through text-gray-500">$12.50</span><span class="text-green-400 font-semibold ml-2">(60% OFF)</span></div></div>
+                                        <div class="bg-gray-800 p-4 rounded-lg grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-4 items-center text-sm"><div class="md:hidden font-semibold text-gray-400">PROTOCOLO</div><div class="md:hidden font-semibold text-gray-400 text-right">AUMENTO</div><div class="font-bold text-white text-base md:text-center">25%</div><div class="text-white md:text-center text-right">0.5 cm</div><div class="col-span-2 border-t border-gray-700 my-2 md:hidden"></div><div class="md:hidden font-semibold text-gray-400">VALOR</div><div class="md:hidden font-semibold text-gray-400 text-right">DESCUENTO</div><div class="font-bold text-red-500 text-lg md:text-center">$4</div><div class="text-white md:text-center text-right"><span class="line-through text-gray-500">$10.00</span><span class="text-green-400 font-semibold ml-2">(60% OFF)</span></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <label class="flex items-center p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white cursor-pointer hover:border-red-500 transition-colors answer-option" style="animation-delay: 0.1s"><input type="radio" name="oferta" class="h-5 w-5 text-red-500 bg-gray-700 border-gray-600"><span class="ml-4">25% (Potencial de aumento de 0.5 cm de lápiz)</span></label>
+                                <label class="flex items-center p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white cursor-pointer hover:border-red-500 transition-colors answer-option" style="animation-delay: 0.2s"><input type="radio" name="oferta" class="h-5 w-5 text-red-500 bg-gray-700 border-gray-600"><span class="ml-4">50% (Potencial de aumento de 1.0 cm de lápiz)</span></label>
+                                <label class="flex items-center p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white cursor-pointer hover:border-red-500 transition-colors answer-option" style="animation-delay: 0.3s"><input type="radio" name="oferta" class="h-5 w-5 text-red-500 bg-gray-700 border-gray-600"><span class="ml-4">100% (Potencial de aumento de 2.0 cm de lápiz)</span></label>
+                                <label class="flex items-center p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white cursor-pointer hover:border-red-500 transition-colors answer-option" style="animation-delay: 0.4s"><input type="radio" name="oferta" class="h-5 w-5 text-red-500 bg-gray-700 border-gray-600"><span class="ml-4">400% (Potencial de aumento de 4.0 cm de lápiz)</span></label>
+                            </div>
+                             <div class="flex justify-between items-center mt-8">
+                                <button onclick="prevStep()" class="flex items-center px-6 py-3 rounded-lg font-medium transition-all bg-gray-800 text-gray-400 hover:bg-gray-700">Anterior</button>
+                                <button onclick="submitQuiz()" class="flex items-center px-6 py-3 rounded-lg font-medium transition-all bg-green-600 hover:bg-green-700 text-white">Finalizar Pedido</button>
+                            </div>
+                        </div>
+                    `;
+            }
+            quizContainer.innerHTML = stepHtml;
+        }
+
+        function nextStep() {
+            if (currentStep < quizData.length) {
+                const questionData = quizData[currentStep];
+                let answer;
+                if (questionData.type === 'text') {
+                    answer = document.getElementById('text-answer').value.trim();
+                    if (!answer) {
+                        // Poderia adicionar uma mensagem de erro aqui
+                        return;
+                    }
+                } else {
+                    const radio = document.querySelector('input[name="answer"]:checked');
+                    if (!radio) {
+                        // Validação para garantir que uma opção foi selecionada
+                        return;
+                    }
+                    answer = radio.value;
+                }
+                userAnswers[currentStep] = answer;
+            }
+            currentStep++;
+            renderStep();
+        }
+
+        function prevStep() {
+            if (currentStep > 0) {
+                currentStep--;
+                renderStep();
+            }
+        }
+
+        function submitQuiz() {
+            const selectedOffer = document.querySelector('input[name="oferta"]:checked');
+            if (!selectedOffer) {
+                alert('Por favor, seleccione una oferta para continuar.');
+                return;
+            }
+            // Ação de finalização (aqui poderia redirecionar ou enviar os dados)
+            alert('¡Gracias por completar el diagnóstico! Serás redirigido en breve.');
+        }
+
+        function startCountdown(duration, display) {
+            let timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = hours + ":" + minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = 0;
+                }
+            }, 1000);
+        }
+
+        // Inicia o quiz e o contador
+        document.addEventListener('DOMContentLoaded', function () {
+            renderStep();
+            const countdownDisplay = document.querySelector('#countdown');
+            if (countdownDisplay) {
+                const oneHourFiftyFiveMinutes = (1 * 60 * 60) + (55 * 60) + 56;
+                startCountdown(oneHourFiftyFiveMinutes, countdownDisplay);
+            }
+        });
+    </script>
+
+
+
+
+</body></html>
